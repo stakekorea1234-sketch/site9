@@ -1,0 +1,682 @@
+/* Clean Dark Luxury Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #C9A961;
+    --gold-light: #E4D4A8;
+    --black: #0A0A0A;
+    --dark: #141414;
+    --gray: #1F1F1F;
+    --gray-light: #2A2A2A;
+    --text: #FFFFFF;
+    --text-muted: #999999;
+    --border: rgba(201, 169, 97, 0.2);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--black);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--gold);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header-btn {
+    padding: 10px 24px;
+    background: var(--gold);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.header-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(201, 169, 97, 0.1);
+    border: 1px solid var(--border);
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: var(--gold);
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.gold-accent {
+    color: var(--gold);
+}
+
+.hero-desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+}
+
+/* Promo Section */
+.promo-section {
+    margin-bottom: 40px;
+}
+
+.promo-box {
+    background: var(--gray);
+    border: 1px solid var(--border);
+    padding: 30px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.promo-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.promo-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--black);
+    border: 1px solid var(--gold);
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.promo-code:hover {
+    background: rgba(201, 169, 97, 0.05);
+}
+
+.promo-code span {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.copy-icon {
+    color: var(--gold);
+    opacity: 0.6;
+}
+
+.promo-benefit {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.main-btn {
+    display: inline-block;
+    padding: 16px 48px;
+    background: var(--gold);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.main-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+/* Features */
+.features {
+    padding: 80px 0;
+    background: var(--dark);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--gray);
+    padding: 30px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    border-color: var(--border);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(201, 169, 97, 0.1);
+    border: 1px solid var(--border);
+}
+
+.feature-icon svg {
+    color: var(--gold);
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Steps Section - Timeline Design */
+.steps {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.steps-timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: var(--gray-light);
+    z-index: 0;
+}
+
+.timeline-progress::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--gold);
+    animation: progressFill 3s ease-out forwards;
+}
+
+@keyframes progressFill {
+    to { width: 100%; }
+}
+
+.timeline-step {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    z-index: 1;
+}
+
+.timeline-dot {
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.timeline-dot span {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.timeline-step:hover .timeline-dot {
+    background: var(--gold);
+    transform: scale(1.2);
+}
+
+.timeline-step:hover .timeline-dot span {
+    color: var(--black);
+}
+
+.timeline-content {
+    padding: 0 10px;
+}
+
+.timeline-image {
+    width: 180px;
+    height: 120px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border: 1px solid var(--gray-light);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-step:hover .timeline-image {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.timeline-content p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Benefits - Horizontal Cards */
+.benefits {
+    padding: 80px 0;
+    background: var(--dark);
+}
+
+.benefits-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: var(--gray);
+    border: 1px solid var(--gray-light);
+    transition: all 0.3s;
+}
+
+.benefit-card:hover {
+    border-color: var(--gold);
+    background: rgba(201, 169, 97, 0.05);
+    transform: translateY(-3px);
+}
+
+.benefit-icon {
+    font-size: 32px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.benefit-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--gold);
+}
+
+.benefit-info p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Crypto Section */
+.crypto {
+    padding: 80px 0;
+}
+
+.crypto-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.crypto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: var(--gray);
+    border: 1px solid var(--gray-light);
+    min-width: 100px;
+    transition: all 0.3s;
+}
+
+.crypto-item:hover {
+    border-color: var(--border);
+    transform: translateY(-3px);
+}
+
+.crypto-symbol {
+    font-size: 28px;
+    color: var(--gold);
+}
+
+.crypto-item span:last-child {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.crypto-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* CTA Section */
+.cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.1) 0%, transparent 100%);
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 18px 60px;
+    background: var(--gold);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.cta-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    background: var(--black);
+    border-top: 1px solid var(--gray-light);
+    text-align: center;
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Floating Code */
+.floating-code {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--gray);
+    border: 1px solid var(--gold);
+    padding: 12px 20px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.floating-code:hover {
+    background: rgba(201, 169, 97, 0.1);
+    transform: translateY(-3px);
+}
+
+.floating-code span {
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .benefits-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .promo-code span {
+        font-size: 20px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Timeline Mobile */
+    .steps-timeline {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+    .timeline-progress {
+        left: 29px;
+        top: 40px;
+        bottom: 40px;
+        width: 2px;
+        height: auto;
+        right: auto;
+    }
+    
+    .timeline-progress::after {
+        width: 100%;
+        height: 0;
+        animation: progressFillVertical 3s ease-out forwards;
+    }
+    
+    @keyframes progressFillVertical {
+        to { height: 100%; }
+    }
+    
+    .timeline-step {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    
+    .timeline-dot {
+        margin: 0 20px 0 10px;
+        min-width: 40px;
+    }
+    
+    .timeline-content {
+        padding: 0;
+    }
+    
+    .timeline-image {
+        margin: 0 0 15px 0;
+    }
+    
+    /* Benefits Mobile - Already 1 column from 1024px */
+    
+    .cta-content h2 {
+        font-size: 32px;
+        white-space: normal;
+    }
+    
+    .floating-code {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-desc {
+        font-size: 14px;
+    }
+    
+    .main-btn {
+        padding: 14px 32px;
+        font-size: 14px;
+    }
+    
+    .promo-box {
+        padding: 20px;
+    }
+    
+    .promo-code span {
+        font-size: 18px;
+    }
+    
+    .crypto-list {
+        gap: 10px;
+    }
+    
+    .crypto-item {
+        padding: 15px;
+        min-width: 80px;
+    }
+    
+    .cta-content h2 {
+        font-size: 24px;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    .cta-btn {
+        padding: 16px 40px;
+        font-size: 16px;
+    }
+}
